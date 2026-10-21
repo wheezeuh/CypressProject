@@ -13,7 +13,7 @@ describe('This will test the Add to cart function', () => {
 
     })
 
-     it.only('Remove from cart function', () => {
+     it('Remove from cart function', () => {
         LaunchApp();
         LoginFunction('standard_user', 'secret_sauce');
         AddtoCart();

@@ -32,4 +32,17 @@ describe('This spec file will use fixture to load data', () => {
         })
     })
 
+    it('Fill the User Information using fixtures', () => {
+        cy.visit('https://demo.guru99.com/test/newtours/register.php')
+
+
+        cy.fixture('UserInfo').then((data) => {
+
+
+            cy.get('input[name="email"]').type(data.UserName)
+            cy.get('input[name="password"]').type(data.Password)
+            cy.get('input[name="confirmPassword"]').type(data.Confirmation)
+
+        })
+    })
 })

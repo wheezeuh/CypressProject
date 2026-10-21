@@ -7,10 +7,18 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run",
+    "open": "cypress open",
+    "test:browser:headed": "cypress run --browser edge --headed ",
+    "test:browser:headedless": "cypress run --browser edge --headless ",
+    "test:XpathTest": "cypress run --spec cypress/e2e/XpathTest.cy.js --headed",
+    "test:AddToCart": "cypress run --spec cypress/e2e/AddToCart.cy.js --headed"
+
+    
   },
   "devDependencies": {
-    "cypress": "^16.2.0"
+    "cypress": "^16.2.0",
+    "cypress-mochawesome-reporter": "^5.0.0"
   },
   "dependencies": {
     "@cypress/xpath": "^2.0.3"
